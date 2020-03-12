@@ -11,34 +11,45 @@ Domain Path: /languages
 License: MIT License
 */
 
-define("TERMS_OF_USE_META_KEY", "_tag_page_as_terms_of_use");
+define("MEDIA_LOGO_META_KEY", "_tag_media_as_logo");
 
-add_action('add_meta_boxes','add_tag_page_as_terms_of_use_metaboxes');
-function add_tag_page_as_terms_of_use_metaboxes()
+add_action('add_meta_boxes','add_tag_media_as_logo_metaboxes');
+function add_tag_media_as_logo_metaboxes()
 {
-  load_plugin_textdomain('tag-page-as-terms-of-use', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
-  add_meta_box('tag_page_as_terms_of_use', __('Terms of use', 'tag-page-as-terms-of-use'), 'tag_page_as_terms_of_use', 'attachment', 'side', 'default');
+  load_plugin_textdomain('tag-media-as-logo', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
+  add_meta_box('tag_media_as_logo', __('Logo', 'tag-media-as-logo'), 'tag_media_as_logo', 'attachment', 'side', 'default');
 }
 
-function tag_page_as_terms_of_use($post){
-  $val = get_post_meta($post->ID,'_tag_page_as_terms_of_use',true);
+function tag_media_as_logo($post)
+{
+  $val = get_option(MEDIA_LOGO_META_KEY);
   
-  echo '<label for="tag-page-as-terms-of-use"><input id="tag-page-as-terms-of-use" name="tag-page-as-terms-of-use" type="checkbox" value="use"';
+  echo '<label for="tag-media-as-logo"><input id="tag-media-as-logo" name="tag-media-as-logo" type="checkbox" value="use"';
   
-  if($val == 'use')
+  if($val == $post->ID)
   {
     echo 'checked';
   }
 
-  echo '/>' . __('Use this page as a Terms of use page', 'tag-page-as-terms-of-use') . '</label>';
+  echo '/>' . __('Use this media as logo', 'tag-media-as-logo') . '</label>';
 }
 
-add_action('save_post','save_tag_page_as_terms_of_use_metaboxes');
-function save_tag_page_as_terms_of_use_metaboxes($post_ID){
-  if(isset($_POST['tag-page-as-terms-of-use'])){
-    update_post_meta($post_ID, TERMS_OF_USE_META_KEY, $_POST['tag-page-as-terms-of-use']);
+add_action('edit_attachment','save_tag_media_as_logo_metaboxes');
+function save_tag_media_as_logo_metaboxes($post_ID)
+{    
+  if(isset($_POST['tag-media-as-logo']))
+  {
+    if(get_option(MEDIA_LOGO_META_KEY) === FALSE)
+    {
+      add_option(MEDIA_LOGO_META_KEY, $post_ID);
+    }
+    else
+    {
+      update_option(MEDIA_LOGO_META_KEY, $post_ID);
+    }
   }
-  else {
-    delete_post_meta($post_ID, TERMS_OF_USE_META_KEY);
+  else 
+  {
+    delete_post_meta(MEDIA_LOGO_META_KEY);
   }
 }

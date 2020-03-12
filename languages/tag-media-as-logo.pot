@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Tag Page As Terms Of Use 0.1\n"
-"Report-Msgid-Bugs-To: https://github.com/ludovicroland/tagPageAsTermsOfUse-wordpress/issues\n"
+"Project-Id-Version: Tag Media As Logo 0.1\n"
+"Report-Msgid-Bugs-To: https://github.com/ludovicroland/tagMediaAsLogo-wordpress/issues\n"
 "POT-Creation-Date: 2014-11-01 14:24:50+00:00\n"
 "PO-Revision-Date: 2014-11-01 14:24:50+00:00\n"
 "MIME-Version: 1.0\n"
@@ -10,10 +10,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language-Team: Ludovic ROLAND <contact@rolandl.fr>\n"
 
-#: ../tag-page-as-terms-of-use.php:19
-msgid "Terms of use"
+#: ../tag-media-as-logo.php:20
+msgid "Logo"
 msgstr ""
 
-#: ../tag-page-as-terms-of-use.php:32
-msgid "Use this page as a Terms of use page"
+#: ../tag-media-as-logo.php:34
+msgid "Use this media as logo"
 msgstr ""

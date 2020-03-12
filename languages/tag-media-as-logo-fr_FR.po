@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Tag Page As Terms Of Use 0.1\n"
-"Report-Msgid-Bugs-To: https://github.com/ludovicroland/tagPageAsTermsOfUse-"
+"Report-Msgid-Bugs-To: https://github.com/ludovicroland/tagMediaAsLogo-wordpress/issues"
 "wordpress/issues\n"
 "POT-Creation-Date: 2014-11-01 14:24:50+00:00\n"
 "PO-Revision-Date: 2014-11-01 14:28+0100\n"
@@ -14,10 +14,10 @@ msgstr ""
 "X-Generator: Poedit 1.6.10\n"
 "Language: fr\n"
 
-#: ../tag-page-as-terms-of-use.php:19
-msgid "Terms of use"
-msgstr "Mentions légales"
+#: ../tag-media-as-logo.php:20
+msgid "Logo"
+msgstr "Logo"
 
-#: ../tag-page-as-terms-of-use.php:32
-msgid "Use this page as a Terms of use page"
-msgstr "Utiliser cette page pour les mentions légales"
+#: ../tag-media-as-logo.php:34
+msgid "Use this media as logo"
+msgstr "Utiliser ce média comme logo"

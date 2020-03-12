@@ -23,7 +23,7 @@ Now you can:
 * retrieve the media that has been tag with :
 
 ```php
-//TODO
+echo wp_get_attachment_url(get_option(MEDIA_LOGO_META_KEY));
 ```
 
 ## Changelog

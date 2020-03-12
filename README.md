@@ -1,15 +1,15 @@
-# Tag Page As Terms Of Use for Wordpress
+# Tag Media As Logo for Wordpress
 
 Contributors: ludovicroland ([http://www.rolandl.fr](http://www.rolandl.fr))<br/>
 Requires at least: 4.0<br/>
 Tested up to: 4.0<br/>
 Stable tag: 0.1<br/>
-License: GNU GPL v2.0<br/>
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: MIT License<br/>
+License URI: https://opensource.org/licenses/mit-license.php
 
 ## Description
 
-Adds a meta box to the Edit Page page where you can tag a page as a "terms of use" page.
+Adds a meta box to a media where you can tag it as a "logo".
 
 ## Installation
 
@@ -19,18 +19,12 @@ Adds a meta box to the Edit Page page where you can tag a page as a "terms of us
 
 Now you can:
 
-* define a page as the "terms of use" page of your blog
-* retrieve the page that has been tag with :
+* define a media as the "logo" of your blog
+* retrieve the media that has been tag with :
 
 ```php
-$pages = get_pages(array('meta_key' => TERMS_OF_USE_META_KEY));
+//TODO
 ```
-
-# Screenshots
-
-![French](https://raw.github.com/ludovicroland/tagPageAsTermsOfUse-wordpress/master/screenshot-1.jpg)
-
-![English](https://raw.github.com/ludovicroland/tagPageAsTermsOfUse-wordpress/master/screenshot-2.jpg)
 
 ## Changelog
 

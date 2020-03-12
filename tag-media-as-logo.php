@@ -50,6 +50,6 @@ function save_tag_media_as_logo_metaboxes($post_ID)
   }
   else 
   {
-    delete_post_meta(MEDIA_LOGO_META_KEY);
+    delete_option(MEDIA_LOGO_META_KEY);
   }
 }
